@@ -1,0 +1,16 @@
+.main-wrapper {
+  background-color: rgb(47, 47, 49);
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 1px solid white; */
+}
+
+.todo-item {
+  border-bottom: 1px solid white;
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block styles%} {{
+super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='/css/index.css')}}" />
+{% endblock %}{%block content%}
+<div class="todo-container mt-5">
+  <h1 class="text-center text-white">Todo App</h1>
+
+  <form action="/add" method="post">
+    <div>
+   
+      <div class="input-group mt-3 mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          placeholder="Add task"
+          aria-label="taskname"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-success" type="submit" id="button-addon2">
+          Add
+        </button>
+      </div>
+ 
+
+      {{ macro.displayTodoList(todo_list)}}
+    </div>
+  </form>
+</div>
+{%endblock%}
